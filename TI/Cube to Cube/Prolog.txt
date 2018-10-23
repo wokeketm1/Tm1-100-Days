@@ -1,0 +1,112 @@
+########################
+# Note
+########################
+
+#=========================================
+# Define Constant
+#=========================================
+cProcessName = GetProcessName();
+cTimeStamp = TimSt( Now, '\Y\m\d\h\i\s' );
+sRandomInt = NumberToString( INT( RAND( ) * 1000 ));
+cDebugFile = GetProcessErrorFileDirectory | cProcessName | '.' | cTimeStamp | '.' | sRandomInt | 'Prolog.debug' ;
+
+cCubeSource='';
+cCubeTarget='';
+
+#=========================================
+# Turn off cube log
+#=========================================
+nLogChanges = CubeGetLogChanges(cCubeTarget);
+CubeSetLogChanges(cCubeTarget, 0);
+
+#=========================================
+#Target
+#=========================================
+cTempName = '}TI_' | cProcessName | '_Tar_' | NumberToString(Int(Rand() * 10000));
+While (ViewExists(cCubeTarget, cTempName) <> 0);
+    cTempName = '}TI_' | cProcessName | '_Tar_' | NumberToString(Int(Rand() * 10000));
+End;
+cView = cTempName;
+cSubset = cTempName;
+
+If (ViewExists(cCubeTarget, cView) = 1);
+     ViewDestroy(cCubeTarget, cView);
+EndIf;
+
+#Create Target View
+sFilter = '';
+sFilter = sFilter | 'Scenario:' | sScenario;
+sFilter = sFilter | '& Version:' | sVersion;
+sFilter = sFilter | '& Year:' | sYear;
+sFilter = sFilter | '& Month:' | sMonth;
+sFilter = sFilter | '& Measure :' | sElement;
+
+ExecuteProcess ( 'Bedrock.Cube.View.Create', 'pCube' , cCubeTarget, 'pView' , cView, 'pFilter' , sFilter,'pElementStartDelim', ':',
+                 'pSuppressZero',1,
+                 'pSuppressConsol',1,
+                 'pSuppressRules',1,
+                 'pDebug',0);
+
+
+####ViewSubsetAssign####
+#cDimTarget='';
+#cSubsetTarget=cTempName;
+#sMDX = '{TM1DRILLDOWNMEMBER( {[Product].[All Products]}, ALL, RECURSIVE )}';
+#
+#ExecuteProcess('Bedrock.Dim.Sub.Create.ByMDX','pDimension',cDimTarget,'pSubset',cSubsetTarget,'pMDXExpr',sMDX,'pConvertToStatic',1,
+#               'pDebug',0);
+#
+#ViewSubsetAssign(cCubeTarget, cView, cDimTarget , cSubsetTarget);
+
+#ZeroOut Target View
+ViewZeroOut(cCubeTarget, cView);
+
+#Clean Temp View
+ExecuteProcess('Bedrock.Cube.ViewAndSubsets.Delete','pCube', cCubeTarget,'pView', cView,'pSubset', cSubset,'pMode',1,
+               'pDebug',0);
+
+#=========================================
+#Source
+#=========================================
+cTempName = '}TI_' | cProcessName | '_Src_' | NumberToString(Int(Rand() * 10000));
+While (ViewExists(cCubeSource, cTempName) <> 0);
+    cTempName = '}TI_' | cProcessName | '_Src_' | NumberToString(Int(Rand() * 10000));
+End;
+cView = cTempName;
+cSubset = cTempName;
+
+If (ViewExists(cCubeSource, cView) = 1);
+     ViewDestroy(cCubeSource, cView);
+EndIf;
+
+#Create Source View Filter
+sFilter = '';
+sFilter = sFilter | 'Scenario:' | sScenario;
+sFilter = sFilter | '& Version:' | sVersion;
+sFilter = sFilter | '& Year:' | sYear;
+sFilter = sFilter | '& Month:' | sMonth;
+sFilter = sFilter | '& Measure :' | sElement;
+
+ExecuteProcess ( 'Bedrock.Cube.View.Create', 'pCube' , cCubeSource, 'pView' , cView, 'pFilter' , sFilter,'pElementStartDelim', ':',
+                 'pSuppressZero',1,
+                 'pSuppressConsol',1,
+                 'pSuppressRules',0,
+                 'pDebug',0);
+
+####ViewSubsetAssign####
+#cDimSource='';
+#cSubsetSource=cTempName;
+#sMDX = '{TM1DRILLDOWNMEMBER( {[Product].[All Products]}, ALL, RECURSIVE )}';
+#
+#ExecuteProcess('Bedrock.Dim.Sub.Create.ByMDX','pDimension',cDimSource,'pSubset',cSubsetSource,'pMDXExpr',sMDX,'pConvertToStatic',1,
+#      'pDebug',0);
+#
+#ViewSubsetAssign(cCubeSource, cView, cDimSource , cSubsetSource);
+
+#=========================================
+#Datasource
+#=========================================
+DatasourceNameForServer = cCubeSource;
+DatasourceNameForClient = cCubeSource;
+DatasourceType='VIEW';
+DatasourceCubeView = cView;

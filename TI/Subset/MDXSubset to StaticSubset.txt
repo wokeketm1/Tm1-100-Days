@@ -1,0 +1,25 @@
+#====================
+#Constant
+#====================
+cProcess=GetProcessName();
+sSubsetProduct = cProcess | 'Product';
+
+#====================
+#SubsetCreatebyMdx
+#====================
+If ( SubsetExists( 'Product', sSubsetProduct) > 0 );
+    SubsetDestroy( 'Product', sSubsetProduct );
+Endif;
+
+sMDX= '{TM1DRILLDOWNMEMBER( {[Product].[All Products]}, ALL, RECURSIVE )}';
+SubsetCreatebyMdx( SSubsetProduct, sMdx, 'Product', 0 );
+
+#========================================
+#Tansfer from MDXSubset To StaticSubset 
+#========================================
+nElements = SubsetGetSize( 'Product', SSubsetProduct );
+If ( nElements > 0 );
+	sLast = SubsetGetElementName( 'Product', SSubsetProduct, nElements );
+	SubsetElementDelete( 'Product', SSubsetProduct, nElements );
+	SubsetElementInsert( 'Product', SSubsetProduct, sLast, nElements );
+Endif;

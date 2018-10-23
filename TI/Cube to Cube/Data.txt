@@ -1,0 +1,34 @@
+nQty = CellGetN(cCubeSource, 
+                     sScenario, 
+                     sYear,
+                     sMonth,
+                     sMonthday,
+                     vCustomer,
+                     vProduct,
+                     vLineItem,
+                     'Qty');
+
+#=========================================
+#Replace
+#=========================================
+       CellPutN(nQty,
+                     sScenario, 
+                     sYear,
+                     sMonth,
+                     sMonthday,
+                     vCustomer,
+                     vProduct,
+                     vLineItem
+                     'Qty');
+#=========================================
+#Append
+#=========================================
+       CellIncrementN(nQty,
+                     sScenario, 
+                     sYear,
+                     sMonth,
+                     sMonthday,
+                     vCustomer,
+                     vProduct,
+                     vLineItem
+                     'Qty');

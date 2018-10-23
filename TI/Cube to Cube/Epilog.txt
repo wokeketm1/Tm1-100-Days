@@ -1,0 +1,16 @@
+#=========================================
+#Clean Temp View
+#=========================================
+ExecuteProcess('Bedrock.Cube.ViewAndSubsets.Delete',
+    'pCube', cCubeSource,
+    'pView', cView,
+    'pSubset', cSubset,
+    'pMode',1,
+    'pDebug',0
+    );
+
+
+#=========================================
+# Turn on cube log
+#=========================================
+CubeSetLogChanges(cCubeTarget, nLogChanges);
