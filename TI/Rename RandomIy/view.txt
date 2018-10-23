@@ -1,9 +1,0 @@
-
-##Modify By Stanley 2018/10/09 rename View as random##########
-#
-#          cView = '}TI.' | cProcessName | '.' | cTimeStamp | '.' | sRandomInt;     
-#          While (ViewExists(cCube, cView) <> 0);
-#                         sRandomInt = NumberToString( INT( RAND( ) * 10000 ));
-#                          cView = '}TI.' | cProcessName | '.' | cTimeStamp | '.' | sRandomInt;
-#End;                   
-#####################################################   
