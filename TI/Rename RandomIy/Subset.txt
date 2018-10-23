@@ -1,8 +1,0 @@
-
-
-
-cSubset = '}TI.' | cProcessName | '.' | cTimeStamp | '.' | sRandomInt;     
-While (SubsetExists(cDim, cSubset) <> 0);
-      sRandomInt = NumberToString( INT( RAND( ) * 10000 ));
-      cSubset = '}TI.' | cProcessName | '.' | cTimeStamp | '.' | sRandomInt;
-End;                   

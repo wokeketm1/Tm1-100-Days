@@ -1,0 +1,17 @@
+
+#View
+
+cView = '}TI.' | cProcessName | '.' | cTimeStamp | '.' | sRandomInt;     
+While (ViewExists(cCube, cView) <> 0);
+    sRandomInt = NumberToString( INT( RAND( ) * 10000 ));
+    cView = '}TI.' | cProcessName | '.' | cTimeStamp | '.' | sRandomInt;
+End;                   
+ 
+#Subset 
+ 
+cSubset = '}TI.' | cProcessName | '.' | cTimeStamp | '.' | sRandomInt;     
+While (SubsetExists(cDim, cSubset) <> 0);
+      sRandomInt = NumberToString( INT( RAND( ) * 10000 ));
+      cSubset = '}TI.' | cProcessName | '.' | cTimeStamp | '.' | sRandomInt;
+End;                   
+
