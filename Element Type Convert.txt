@@ -1,0 +1,24 @@
+
+#Note:Converting an element deletes all cube data identified by that element.
+
+############
+# By Ti
+############
+
+#N Level -> C Level
+
+DimName='sales';
+DimensionElementComponentAdd(DimName, 'Parent','Child', 1);
+
+
+#C Level -> N Level
+
+DimName='Sales';
+DimensionElementDelete(DimName, 'Parent');
+DimensionElementInsert(DimName,'', 'Parent','n');
+
+
+#N or C Level -> S Level
+DimName='Sales';
+DimensionElementDelete(DimName, 'Parent');
+DimensionElementInsert(DimName,'', 'Parent','s');
