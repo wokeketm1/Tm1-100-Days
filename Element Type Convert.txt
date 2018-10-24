@@ -6,19 +6,20 @@
 ############
 
 #N Level -> C Level
-
+#Prolog
 DimName='sales';
 DimensionElementComponentAdd(DimName, 'Parent','Child', 1);
 
 
 #C Level -> N Level
-
+#Prolog
 DimName='Sales';
 DimensionElementDelete(DimName, 'Parent');
 DimensionElementInsert(DimName,'', 'Parent','n');
 
 
 #N or C Level -> S Level
+#Prolog
 DimName='Sales';
 DimensionElementDelete(DimName, 'Parent');
 DimensionElementInsert(DimName,'', 'Parent','s');
