@@ -1,0 +1,9 @@
+
+在TM1web按下按鈕的當下
+1.檢查執行者是否有執行TI的權限
+2.確認該TI安全存取狀態，如有勾選安全存取執行權限為SecurityAdmin，未勾選安全存取執行權限則為DataAdmin。
+
+擁有SecurityAdmin權限才可以針對{SecurityObject進行控制
+如有撰寫Security相關的TI，
+請記得右鍵TI勾選安全存取。
+
