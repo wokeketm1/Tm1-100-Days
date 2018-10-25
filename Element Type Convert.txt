@@ -1,5 +1,5 @@
 
-#Note:Converting an element deletes all cube data identified by that element.
+#Note:Converting an element will delete all cube data identified by that element.
 
 ############
 # By Ti
