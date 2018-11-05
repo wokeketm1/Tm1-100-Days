@@ -1,2 +1,2 @@
 # Tm1-SampleCode
-Convenient for developers
+In order to be more convenient for developers to develop Tm1 Project
