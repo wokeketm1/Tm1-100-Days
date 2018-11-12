@@ -1,0 +1,5 @@
+
+當你發生伺服器端連線一切順利，但是Client端怎麼樣都連不進去時，
+請嘗試在cfg中修改參數IPVersion = dual。
+
+https://www-01.ibm.com/support/docview.wss?uid=swg22010949
