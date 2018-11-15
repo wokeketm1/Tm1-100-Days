@@ -6,7 +6,7 @@
     Endif;
   ```
   * 程序失敗
-  * 說明:略過該筆資料，繼續向下一筆執行，最後顯示錯誤，慣用於調整錯誤訊息的內容。
+  * 略過該筆資料，繼續向下一筆執行，最後顯示錯誤，慣用於調整錯誤訊息的內容。
   
   
 # ItemSkip
@@ -17,7 +17,7 @@
   Endif;
   ```
   * 程序成功
-  * 說明:略過該筆資料，繼續向下一筆執行，慣用於Data tab。
+  * 略過該筆資料，繼續向下一筆執行，慣用於Data tab。
   
   
 # ProcessBreak
@@ -28,7 +28,7 @@
   Endif;
   ```
   * 程序成功
-  * 說明:直接跳至結尾，慣用於來源有誤，搭配_ItemSkip_**記錄錯誤內容。  
+  * 直接跳至結尾，慣用於來源有誤，可搭配*ItemSkip*記錄錯誤內容。  
   
   
 # ProcessError
@@ -39,7 +39,7 @@
   Endif;
   ```
   * 程序失敗
-  * 說明:直接終止TI並產生TM1ProcessError.txt。 
+  * 直接終止TI並產生TM1ProcessError.txt。 
   
   
 # ProcessQuit
@@ -50,4 +50,4 @@
   Endif;
   ```
   * 程序失敗
-  * 說明:直接終止TI_不_**產生TM1ProcessError.txt。 
+  * 直接終止TI*不*產生TM1ProcessError.txt。 
