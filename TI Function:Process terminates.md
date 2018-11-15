@@ -4,7 +4,7 @@
   
 #ItemSkip
   報錯:X
-  略過該筆資料，多用於Data tab。
+
   範例:
   If (vCountry @='taipei');
     ItemSkip;
