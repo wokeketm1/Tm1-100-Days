@@ -28,7 +28,7 @@
   Endif;
   ```
   * 程序成功
-  * 說明:直接跳至結尾，慣用於來源有誤，搭配**_ItemSkip_**記錄錯誤內容。  
+  * 說明:直接跳至結尾，慣用於來源有誤，搭配_ItemSkip_**記錄錯誤內容。  
   
   
 # ProcessError
@@ -50,4 +50,4 @@
   Endif;
   ```
   * 程序失敗
-  * 說明:直接終止TI**_不_**產生TM1ProcessError.txt。 
+  * 說明:直接終止TI_不_**產生TM1ProcessError.txt。 
