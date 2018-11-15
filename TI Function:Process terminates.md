@@ -1,13 +1,11 @@
 # ItemReject
-  ..* 報錯:O
-  
-  ..* 範例:
-  If (vCountry @='taipei');
-    ItemReject('來源不能有' | vCountry);
-  Endif;
-  
-  ..* 說明:
-  略過該筆資料，繼續判向下執行，慣用於調整錯誤訊息的內容。
+  * 報錯:O
+  ```python
+    If (vCountry @='taipei');
+      ItemReject('來源不能有' | vCountry);
+    Endif;
+  ```
+  * 說明:略過該筆資料，繼續判向下執行，慣用於調整錯誤訊息的內容。
   
 # ItemSkip
   報錯:X
