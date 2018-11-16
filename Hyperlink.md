@@ -4,10 +4,11 @@
  
 # Entity Path
  1. Active Form上傳後會產生實體檔案，路徑如下。
- 2. 直接在路徑下點開相對應的Excel，效果同在Perspective中開啟。
-  ```
+   ```
   \\Data Path\}Externals
   ```
+ 2. 可嘗試在路徑下點開相對應的Excel，效果同在Perspective中開啟。
+
 
 # Hyperlink in Excel
   ```
