@@ -1,0 +1,12 @@
+1.In TM1s.cfg, need to have parameter 
+    HTTPPortNumber = xxxxx
+  
+2.Website test with Browser:
+   http://localhost: xxxxx/api/v1/$metadata
+   
+   
+3.Check Script
+    In Python install folder you can find [TM1py-samples-master] and check.py will inside the folder .
+    Using command line:
+                        Python.exe [path]/check.py
+         
