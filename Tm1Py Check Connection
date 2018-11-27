@@ -1,12 +1,17 @@
-1.In TM1s.cfg, need to have parameter 
+1.Package Import
+  I.copy all contents in "Python Offline"(include .whl file) to D:/Program Files/python37/Scripts
+  II.Open CMD and run command below:
+                                     pip install --no-index --find-links="D:/Program Files/python37/Scripts" TM1py
+
+2.In TM1s.cfg, need to have parameter 
     HTTPPortNumber = xxxxx
   
-2.Website test with Browser:
-   http://localhost: xxxxx/api/v1/$metadata
+3.Website test with Browser:
+                              http://localhost: xxxxx/api/v1/$metadata
    
    
-3.Check Script
-    In Python install folder you can find [TM1py-samples-master] and check.py will inside the folder .
-    Using command line:
-                        Python.exe [path]/check.py
+4.Check Script
+    I.In Python install folder you can find [TM1py-samples-master] and check.py will inside the folder .    (Download Url:https://github.com/cubewise-code/TM1py-samples)
+    II.Open CMD and run command below:
+                                      Python.exe [path]/check.py
          
