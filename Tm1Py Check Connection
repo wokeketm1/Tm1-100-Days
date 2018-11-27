@@ -3,15 +3,17 @@
   II.Open CMD and run command below:
                                      pip install --no-index --find-links="D:/Program Files/python37/Scripts" TM1py
 
-2.In TM1s.cfg, need to have parameter 
-    HTTPPortNumber = xxxxx
+2.In TM1s.cfg, need to have parameter:
+                                     HTTPPortNumber = xxxxx
   
 3.Website test with Browser:
                               http://localhost: xxxxx/api/v1/$metadata
    
    
 4.Check Script
-    I.In Python install folder you can find [TM1py-samples-master] and check.py will inside the folder .    (Download Url:https://github.com/cubewise-code/TM1py-samples)
+    I.In Python install folder you can find [TM1py-samples-master] and check.py will inside the folder .   
+      (Check Script Download Url:https://github.com/cubewise-code/TM1py-samples)
+    
     II.Open CMD and run command below:
                                       Python.exe [path]/check.py
          
