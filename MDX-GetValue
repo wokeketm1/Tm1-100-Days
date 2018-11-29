@@ -1,0 +1,26 @@
+#############
+#MDX Editor
+#############
+
+#Single Element
+{ StrToMember("[Dim].[" +[Cube].([Dim1].[0001],[Dim2].[Element])+"]") }
+
+#Multiple Element
+{
+StrToMember("[Dim].[" +[Cube].([Dim1].[0001],[Dim2].[Element])+"]"),
+StrToMember("[Dim].[" +[Cube].([Dim1].[0002],[Dim2].[Element])+"]")
+}
+
+
+#############
+#EXCEL 
+#############
+
+#Single Element
+{ StrToMember(""[Dim].["" +[Cube].([Dim1].[0001],[Dim2].[Element])+""]"") }
+
+#Multiple Element
+{
+StrToMember(""[Dim].["" +[Cube].([Dim1].[0001],[Dim2].[Element])+""]""),
+StrToMember(""[Dim].["" +[Cube].([Dim1].[0002],[Dim2].[Element])+""]"")
+}
