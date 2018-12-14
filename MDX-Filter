@@ -1,0 +1,23 @@
+#屬性篩選
+{FILTER( {TM1SUBSETALL( [TargetDimension] )}, [TargetDimension].[Attribute] = "BU1")}
+
+#Cell篩選
+
+    #><
+    {FILTER(TM1SUBSETALL([TargetDimension]),[Cube].([DIM1].[element1],
+                                                [DIM2].[element2],
+                                                [Measure].[element3]) > 0.00000001) }
+
+    #=
+    {FILTER(TM1SUBSETALL([TargetDimension]),[Cube].([DIM1].[element1],
+                                                [DIM2].[element2],
+                                                [Measure].[element3]) = "V") }
+
+    #模糊篩選
+    {Filter({TM1FILTERBYLEVEL( {TM1SUBSETALL( [TargetDimension] )}, 0)}, Instr([Cube].([Measure].[element]), '王大同' ) > 0)}	
+
+
+
+#模糊篩選
+
+{TM1FILTERBYPATTERN( {TM1FILTERBYLEVEL( {TM1SUBSETALL( [TargetDimension] )}, 0)}, '*王大同*')}
