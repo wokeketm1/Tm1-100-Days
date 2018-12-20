@@ -5,19 +5,19 @@
        Dim:Measure(Name,Link,Sheet,Security)
        
 2.建立Prespective設計如下所示。
-            ┌───┐  ┌───┐
-            │ xx│  │   │
-            └───┘  └───┘
-  Name       xx       xy
-  Link      xx\xx    xx\xy
-  Sheet     Sheet1  Sheet1
+            ┌────┐  ┌────┐
+            │ xx │  │    │
+            └────┘  └────┘
+  Name        xx       xy
+  Link      xx\xx     xx\xy
+  Sheet     Sheet1   Sheet1
   Security    Y        N
-            ┌───┐  ┌───┐
-            │ xz│  │   │
-            └───┘  └───┘
+            ┌────┐  ┌────┐
+            │    │  │ xa │
+            └────┘  └────┘
   Name       xz       xa
   Link      xx\xz    xx\xa
   Sheet     Sheet1  Sheet1
-  Security    Y        N
+  Security    N        Y
   
   3.透過Cube:Menu_Security去控制每個Group能看到什麼按鈕。
