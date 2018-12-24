@@ -1,0 +1,12 @@
+1.Create Parameter Cube(Dim:Parameter{Timestart,TimeEnd},Measure:Measure)
+2.Fill in Timestart and TimeEnd
+3.Use this MDXQuery to create MDXSubset
+4.Finally , you can use cell to control this Dynamic subsets
+
+
+MDXQuery:
+{ 
+StrToMember("[Time].[" +[Parameter].([Parameter].[Timestart],[Measure].[String])+"]")
+:
+StrToMember("[Time].[" +[Parameter].([Parameter].[TimeEnd],[Measure].[String])+"]")
+}
