@@ -6,7 +6,7 @@ cDebugFile = GetProcessErrorFileDirectory | cProcessName | '.' | cTimeStamp | '.
 
 sLS = 'howard+george+curry+Mary+';
 
-While( Long( sLS ) > 1);
+While( Long( sLS ) > 0);
 
      i = Subst( sLS, 1, Scan('+', sLS) - 1);
 
