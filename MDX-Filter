@@ -3,7 +3,7 @@
 
 #Cell篩選
 
-    #><
+    #> or <
     {FILTER(TM1SUBSETALL([TargetDimension]),[Cube].([DIM1].[element1],
                                                 [DIM2].[element2],
                                                 [Measure].[element3]) > 0.00000001) }
