@@ -1,0 +1,50 @@
+#Websheet Sample:
+http://ip:9510/tm1web/UrlApi.jsp
+#Action=Open
+&Type=WebSheet
+&Workbook=Applications/Test
+&AdminHost=xxx
+&TM1Server=xxx
+
+#CubeViewer Sample:
+http://ip:9510/tm1web/UrlApi.jsp
+#Action=Open&Type=CubeViewer
+&Cube=xxxx
+&View=xxxx
+&AdminHost=xxx
+&TM1Server=xxx
+&DisplayMode=Grid
+
+
+#Note:
+
+Action=Open
+	Open	開啟 Cognos TM1 Web 物件。
+	
+Type=Websheet
+	CubeViewer	將物件定義為 CubeViewer。
+	Websheet	將物件定義為 Web 工作表。
+
+Workbook=Applications/Test
+	Cognos TM1 Web 工作表的路徑，切記要改為正斜線"/"
+
+AdminHost=xxxx
+	Cognos TM1 Admin Server 的系統名稱
+	
+TM1Server=xxxx
+	Cognos TM1 Server 名稱
+
+Cube=xxxx
+	Cognos TM1 Cube 名稱
+
+View=xxxx
+	Cognos TM1 View 名稱
+
+DisplayMode=Grid
+
+	Chart		使用僅限圖表模式顯示 CubeViewer 物件。
+	Grid		使用僅限網格模式顯示 CubeViewer 物件。
+	GridAndChart	同時使用網格及圖表來顯示 CubeViewer 物件。
+	
+#Reference Website:
+https://www.ibm.com/support/knowledgecenter/zh-tw/SS9RXT_10.2.2/com.ibm.swg.ba.cognos.tm1_dg_dvlpr.10.2.2.doc/c_tm1webjv_urlapi_param_reference.html
