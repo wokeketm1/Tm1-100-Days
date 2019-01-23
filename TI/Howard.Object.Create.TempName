@@ -1,0 +1,34 @@
+
+
+#=========================================
+# Parameter
+#=========================================
+pGoal
+pProcessName
+pCube
+#=========================================
+# Prolog
+#=========================================
+
+#Constant
+cTempName = '}TI_' | pProcessName | '_'|  pGoal  |'_' | NumberToString(Int(Rand() * 10000));
+i=0;
+
+
+#verify Cube and Dim
+nMax = CubeDimensionCountGet(pCube);
+nCtr = 1;
+WHILE(nCtr <= nMax % i=1);
+
+  sDim = TABDIM(pCube, nCtr);
+
+  While (SubsetExists(sDim, cTempName)<> 0 % ViewExists(pCube, cTempName) <> 0 );
+      cTempName = '}TI_' | pProcessName | '_'|  pGoal  |'_' | NumberToString(Int(Rand() * 10000));
+      i=1;
+  End;
+
+  nCtr = nCtr + 1;
+END;
+
+#GlobalVariable
+StringGlobalVariable('cTempName');
