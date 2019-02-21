@@ -1,0 +1,9 @@
+#1~12  --> 01~12
+
+i=1;
+While( i <= 12 );
+
+    NUMBERTOSTRINGEX( i , '00', '', '' );
+    i=i+1;
+
+END;
