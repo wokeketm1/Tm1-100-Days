@@ -6,17 +6,17 @@ E17 F17 G17
 
 1.Cell Formula
 
-E15 ="pServer"
-E16 ="Development"
-E17 ="Production"
+    E15 ="pServer"
+    E16 ="Development"
+    E17 ="Production"
 
-F15 =""
-F16 ="DEV"
-F17 ="PRD"
+    F15 =""
+    F16 ="DEV"
+    F17 ="PRD"
 
-G15 =IF($G$17="",$F$16,$F$17)
-G16 =IF(ISERROR(TM1USER($F$16)), "", TM1USER($F$16))
-G17 =IF(ISERROR(TM1USER($F$17)), "", TM1USER($F$17))
+    G15 =IF($G$17="",$F$16,$F$17)
+    G16 =IF(ISERROR(TM1USER($F$16)), "", TM1USER($F$16))
+    G17 =IF(ISERROR(TM1USER($F$17)), "", TM1USER($F$17))
 
 2.Setting namespace =>  $G$15=pServer
 
