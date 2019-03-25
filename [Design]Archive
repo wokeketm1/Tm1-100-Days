@@ -13,5 +13,8 @@
   Feeder Source =>DB('Cube Name',if(attrn('Year',!Year,'inactive')=1,'',!Year),!Month,!Measure);
   讓封存範圍的Feeder失效，節省記憶體。
   
-  
 5.封存範圍內的Cube匯出成csv，以作備份。
+
+
+P.S.
+所有的記憶體釋放都要等到重啟Server或是有影響的cube reload後才會進行釋放。
