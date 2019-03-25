@@ -13,8 +13,5 @@
   Feeder Source =>DB('Cube Name',if(attrn('Year',!Year,'inactive')=1,'',!Year),!Month,!Measure);
   讓封存範圍的Feeder失效，節省記憶體。
   
-5.調整封存Cube的Feeder
-  Feeder Source =>DB('Cube Name',if(attrn('Year',!Year,'inactive')=1,'',!Year),!Month,!Measure);
-  讓封存範圍的Feeder失效，節省記憶體。
   
-6.封存範圍內的Cube匯出成csv，以作備份。
+5.封存範圍內的Cube匯出成csv，以作備份。
