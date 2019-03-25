@@ -1,0 +1,20 @@
+1.針對要封存的維度，新增數值屬性:inactive
+  例：封存2019以前的所有資料，針對維度:Year，新增屬性:inactive。
+  
+2.調整屬性內容
+  例：針對維度:Year，屬性:inactive，範圍：2016~2018調整為1，2019~2020為0。
+  
+3.調整封存Cube的Rule
+  將下列語法貼到封存Cube的最上方
+  []=N:IF(attrn('Year',!Year,'inactive')=1,STET,CONTINUE);
+  讓封存範圍的規則失效，節省記憶體。
+
+4.調整封存Cube的Feeder
+  Feeder Source =>DB('Cube Name',if(attrn('Year',!Year,'inactive')=1,'',!Year),!Month,!Measure);
+  讓封存範圍的Feeder失效，節省記憶體。
+  
+5.調整封存Cube的Feeder
+  Feeder Source =>DB('Cube Name',if(attrn('Year',!Year,'inactive')=1,'',!Year),!Month,!Measure);
+  讓封存範圍的Feeder失效，節省記憶體。
+  
+6.封存範圍內的Cube匯出成csv，以作備份。
