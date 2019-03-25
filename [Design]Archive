@@ -4,16 +4,20 @@
 2.調整屬性內容
   例：針對維度:Year，屬性:inactive，範圍：2016~2018調整為1，2019~2020為0。
   
-3.調整封存Cube的Rule
+3.封存範圍內的Cube匯出成csv，以作備份。  
+
+4.調整封存Cube的Rule
   將下列語法貼到封存Cube的最上方
   []=N:IF(attrn('Year',!Year,'inactive')=1,STET,CONTINUE);
   讓封存範圍的規則失效，節省記憶體。
 
-4.調整封存Cube的Feeder
+5.調整封存Cube的Feeder
   Feeder Source =>DB('Cube Name',if(attrn('Year',!Year,'inactive')=1,'',!Year),!Month,!Measure);
   讓封存範圍的Feeder失效，節省記憶體。
   
-5.封存範圍內的Cube匯出成csv，以作備份。
+
+6.匯入封存範圍的規則值，方便查看歷史資料。
+
 
 
 P.S.
