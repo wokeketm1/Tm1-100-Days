@@ -28,7 +28,7 @@
   Endif;
   ```
   * 程序成功
-  * 直接跳至結尾，慣用於來源有誤，可搭配*ItemSkip*記錄錯誤內容。  
+  * 直接跳至結尾，慣用於來源有誤，可搭配*AsciiOutput*記錄錯誤內容。  
   
   
 # ProcessError
