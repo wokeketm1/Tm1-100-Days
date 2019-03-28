@@ -1,0 +1,7 @@
+1.Cube取得記憶體後就不會歸還給OS。
+
+2.Unload Cube表面上會釋放記憶體，實際上仍占有Ram。
+
+3.Unload Cube後 Reload Cube 會導致Ram用量加倍。
+
+4.重啟Instance才會將咬住的Ram釋放。
