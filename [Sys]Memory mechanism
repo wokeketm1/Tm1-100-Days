@@ -13,3 +13,11 @@
 6.Over Feeding 時，記憶體的佔用，Rule>UnRule。
 
 7.Clone造成的記憶體增加，要透過重啟才能釋放。
+
+
+Start      8190
+Export     16375
+ReFeeder   8190
+條件Feeder 8190
+W.B.       8247   
+ReFeeder   8190
