@@ -5,3 +5,11 @@
 3.Unload Cube後 Reload Cube 會導致Ram用量加倍。
 
 4.重啟Instance才會將咬住的Ram釋放。
+
+
+
+5.沒有Over Feeding 時，記憶體的佔用，Rule=UnRule。
+
+6.Over Feeding 時，記憶體的佔用，Rule>UnRule。
+
+7.Clone造成的記憶體增加，要透過重啟才能釋放。
