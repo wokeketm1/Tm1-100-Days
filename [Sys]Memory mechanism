@@ -6,18 +6,12 @@
 
 4.重啟Instance才會將咬住的Ram釋放。
 
-
-
 5.沒有Over Feeding 時，記憶體的佔用，Rule=UnRule。
 
 6.Over Feeding 時，記憶體的佔用，Rule>UnRule。
 
 7.Clone造成的記憶體增加，要透過重啟才能釋放。
 
+8.如果開啟持續性饋送器，修改規則當下只會新增饋送器，而不會刪除因編輯規則而可能不在有效的饋送器。
 
-Start      8190
-Export     16375
-ReFeeder   8190
-條件Feeder 8190
-W.B.       8247   
-ReFeeder   8190
+
