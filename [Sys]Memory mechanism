@@ -1,19 +1,15 @@
-1.Cube取得記憶體後就不會歸還給OS。
+1.Cube取得記憶體後就不會歸還給伺服器。
 
-2.Unload Cube表面上會釋放記憶體，實際上仍占有Ram。
+2.Unload Cube表面上會釋放記憶體，實際上仍占有記憶體，導致 Reload Cube 後讓記憶體用量加倍。
 
-3.Unload Cube後 Reload Cube 會導致Ram用量加倍。
+3.重啟Instance才會將咬住的記憶體釋放。
 
-4.重啟Instance才會將咬住的Ram釋放。
+4.記憶體的佔用
+              無Over Feeding 時 Rule=UnRule。
+              有Over Feeding 時 Rule>UnRule。
 
-5.沒有Over Feeding 時，記憶體的佔用，Rule=UnRule。
+5.Clone會造成的記憶體增加，因為在建立視圖時會同步進行運算。
 
-6.Over Feeding 時，記憶體的佔用，Rule>UnRule。
-
-7.Clone造成的記憶體增加，要透過重啟才能釋放。
-
-8.如果開啟持續性饋送器，修改規則當下只會新增饋送器，而不會刪除因編輯規則而可能不在有效的饋送器。
-
-9.如果要完整釋放記憶體，要透過刪除一份Feeder讓伺服器比對發現後，會將所有feeder重新釋放及建立。
-
-
+6.如果開啟持續性饋送器
+             I.修改規則當下只會新增饋送器，而不會刪除因編輯規則而可能不在有效的饋送器。
+             II.如果要完整釋放記憶體，要透過刪除一份Feeder讓伺服器比對發現後，會將所有feeder重新釋放及建立。
