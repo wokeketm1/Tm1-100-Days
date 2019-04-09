@@ -12,4 +12,12 @@
 
 6.如果開啟持續性饋送器
              I.修改規則當下只會新增饋送器，而不會刪除因編輯規則而可能不在有效的饋送器。
-             II.如果要完整釋放記憶體，要透過刪除一份Feeder讓伺服器比對發現後，會將所有feeder重新釋放及建立。
+             
+             II.如果要完整釋放記憶體，要透過刪除一份Feeder讓伺服器比對發現錯誤後，會將所有feeder重新釋放及建立。
+             
+             錯誤訊息↘
+               ***** Persistent Feeder error *****
+                Feeder file error/inconsistency detected for cube "" 
+                reason: Have processed feeder files for cube "" but this cube does not have a feeder file
+               **********
+                Deleting all feeder files ...
