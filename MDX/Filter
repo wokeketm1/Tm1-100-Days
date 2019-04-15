@@ -2,7 +2,7 @@
 #針對元素篩選
 #############
     #屬性
-    {FILTER( {TM1SUBSETALL( [TargetDimension] )}, [TargetDimension].[Attribute] = "BU1")}
+    {FILTER( {TM1SUBSETALL( [TargetDimension] )}, [TargetDimension].[Attribute] = "Female")}
 
     #模糊查詢
     {TM1FILTERBYPATTERN( {TM1FILTERBYLEVEL( {TM1SUBSETALL( [TargetDimension] )}, 0)}, '*王大同*')}
