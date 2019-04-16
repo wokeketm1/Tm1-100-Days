@@ -1,1 +1,16 @@
+##########
+#prolog
+##########
+nStart = NOW;
 
+
+##########
+#Epilog
+##########
+nEnd = NOW;
+nElapsedSeconds = ROUND ((nEnd - nStart) / 0.000011574074074074);
+
+
+
+
+source of information:   https://www.tm1forum.com/viewtopic.php?t=5141
