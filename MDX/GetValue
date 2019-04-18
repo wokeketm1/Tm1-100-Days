@@ -1,5 +1,5 @@
 
-When to use:get element from cube cell for MDX
+When to use:get element from cube cell By MDX
 
 #############
 #MDX Editor
@@ -16,7 +16,7 @@ StrToMember("[Dim].[" +[Cube].([Dim1].[0002],[Dim2].[Element])+"]")
 
 
 #############
-#EXCEL 
+#EXCEL Function
 #############
 
 #Single Element
