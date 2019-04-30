@@ -1,0 +1,28 @@
+#=========================================
+# Define Constant
+#=========================================
+cProcessName = GetProcessName();
+cTimeStamp = TimSt( Now, '\Y\m\d' );
+sRandomInt = NumberToString( INT( RAND( ) * 10000 ));
+cDebugFile = GetProcessErrorFileDirectory | cProcessName | '.' | cTimeStamp | '.' | sRandomInt | 'Prolog.debug' ;
+
+sDim = ''; 
+sSub = sRandomInt;
+sMDX='';
+
+
+ExecuteProcess('Bedrock.Dim.Sub.Create.ByMDX'
+, 'pDimension', sDim
+, 'pSubset', sSub
+, 'pMDXExpr', sMDX
+, 'pConvertToStatic', 1
+, 'pDebug', 0
+);
+
+#=========================================
+#Datasource
+#=========================================
+DatasourceNameForClient =sDim;
+DatasourceNameForServer =sDim;
+DatasourceType='SUBSET';
+DatasourceDimensionSubset=sSub;
