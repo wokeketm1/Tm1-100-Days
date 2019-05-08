@@ -1,0 +1,17 @@
+static:option1:option2:option3
+
+dimension:Dimension_Name
+
+subset:Dimension_Name:Subset_Name
+
+
+Dynamic Picklist
+1.Create Subset
+2.Create PickList Cube 
+3.Create PickList Cube Rule
+4.Write Rule
+
+TarDim=S:
+'Subset:TarDim Name:' | !SrcDim;
+
+5.Result
