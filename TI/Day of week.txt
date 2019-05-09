@@ -1,0 +1,6 @@
+data source:
+https://www.tm1forum.com/viewtopic.php?t=2396
+
+
+# 0 = Sunday, 1 = Monday .... 6 = Saturday.
+DayOfWeek= Mod ( DayNo( TODAY ) + 21915, 7);
