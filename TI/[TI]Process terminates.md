@@ -18,7 +18,7 @@
   ```
   * 程序成功
   * 略過該筆資料，繼續向下一筆執行，慣用於Data tab。
-  
+  * 在Prolog使用會跳至Data tab。
   
 # ProcessBreak
 
