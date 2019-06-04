@@ -1,0 +1,2 @@
+排除：
+{ EXCEPT( "OBJECT","EXCEPTOBJECT") }
