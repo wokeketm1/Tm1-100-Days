@@ -1,0 +1,6 @@
+聯集：
+{UNION(A,B}
+
+
+交集：
+{Intersect( A, B)} 
