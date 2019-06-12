@@ -1,0 +1,8 @@
+.blob
+  Perspective 上傳的檔案
+.view
+  視圖檔
+.extr
+  參照檔(excel,pdf,txt...)
+.cube
+  
