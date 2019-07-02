@@ -19,5 +19,6 @@
     {FILTER(TM1SUBSETALL([TargetDimension]),[Cube].([DIM1].[element1],
                                                 [DIM2].[element2],
                                                 [Measure].[element3]) = "V") }
-    #模糊查詢
+    #模糊查詢(請將其餘維度資訊填齊)
     {Filter({TM1FILTERBYLEVEL( {TM1SUBSETALL( [TargetDimension] )}, 0)}, Instr([Cube].([Measure].[element]), '王大同' ) > 0)}	
+    
