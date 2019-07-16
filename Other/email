@@ -1,0 +1,14 @@
+1.下載BLAT
+https://www.blat.net/
+
+2.安裝BLAT
+Command = '"' |  [Blat folder path] | '" -install ' | [SMTP IP] | ' ' | [Sender];
+
+3.寄信Command line:
+Command = '"' |  [Blat folder path]  | '" ' 
+              |  [email Body]
+              | ' -t "'           |  [Recipient]
+              | '" -f "'          |  [Sender]
+              | '" -subject '     | '"' | [Subject] | '"' 
+              | ' -attach '       | '"' | [Attach]  | '"'
+              |  ' -html ';
