@@ -1,0 +1,9 @@
+EXCEL CELL
+
+E16   ="Dimensionname"
+E17   ="{TM1FILTERBYLEVEL( {TM1SUBSETALL( ["&E$16&"] )}, 0)}"
+E18   =IF(E$20<>"","{TM1FILTERBYPATTERN( {"&E$17&"}, '*"&E$20&"*')}",E$17)
+E19   =E18
+
+E20   =>Filter Cell
+E21   =TM1RPTROW(pView1,pServer&":"&E$16,,,,0,$E$19)
