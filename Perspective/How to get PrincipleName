@@ -1,0 +1,5 @@
+
+
+=DIMNM(server_name:Dimension, DIMIX(server_name:dimension, element),)
+
+=DIMNM(pServer&":Month", DIMIX(pServer&":Month",pMonth),)
