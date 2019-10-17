@@ -1,5 +1,39 @@
-製作報表時請注意
+幫Poweruser製作Prespective報表時請注意!!
 
-如果有DBRW參照到其他DBRW格子時，函式要改成DBR，因為DBR會等DBRW運算完再進行計算
 
-如果都使用DBRW會導致該格顯示"*key_err"，但如都在Web上使用就不會有影響
+#########
+#如果有函式DBRW參照到其他DBRW格子時，在Prespective呈現上會導致該格顯示"*key_err"。
+#########
+A1=DBRW('Parameter','Server Name','txt')
+↓
+A1='Test Server'
+
+
+B1=DBRW('Cube',A1,'2019','Cost')
+↓
+B1=*key_err
+
+
+
+#########
+#請將第二段的函式改成DBR，因DBRW在[同一時間]運算且順序最[優先]，接著再換DBR計算。
+#########
+A1=DBRW('Parameter','Server Name','txt')
+↓
+A1='Test Server'
+
+
+B1=DBR('Cube',A1,'2019','Cost')
+↓
+B1=666
+
+
+
+#########
+#P.S.都在Web上使用就不會有影響。
+#########
+
+
+
+
+
