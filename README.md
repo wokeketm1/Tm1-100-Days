@@ -4,4 +4,4 @@ tm1 is a rebellious child
 
 therefore i record the time which get along with tm1 bit-by-bit
 
-In order to be more convenient for developers to develop Tm1 Project
+hope it will be convenient for developers to develop tm1 project.
