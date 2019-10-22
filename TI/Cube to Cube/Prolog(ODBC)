@@ -69,9 +69,9 @@ ExecuteProcess('Bedrock.Cube.ViewAndSubsets.Delete','pCube', cCubeTarget,'pView'
 #=========================================
 #Datasource
 #=========================================
-sDataSourceName = CellGetS('Sys Parameter', 'Database ODBC Name' , 'Text');
-sDataSourceUsername = CellGetS('Sys Parameter', 'Database Username' , 'Text');
-sDataSourcePassword = CellGetS('Sys Parameter', 'Database Password' , 'Text');
+sDataSourceName = CellGetS('Parameter', 'ODBC' , 'Text');
+sDataSourceUsername = CellGetS('Parameter', 'Username' , 'Text');
+sDataSourcePassword = CellGetS('Parameter', 'Password' , 'Text');
 
 DatasourceNameForServer=sDataSourceName;
 DatasourceNameForClient=sDataSourceName;
