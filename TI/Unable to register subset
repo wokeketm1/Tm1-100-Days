@@ -2,26 +2,30 @@ Error Message:
 
     Unable to register subset "Subset Name" in dimension "Dim" 
 
+
+
 原因:
 
     1.建立的subset名稱有重複會導致無法再次建立Subset
     2.MDX搜尋的結果為空白
     3.掃毒軟體的阻擋實體檔的建立
     
+    
+    
 解決方法:
 
     1.使用Bedrock者，請更新到版本3.1.0，最新版已經將上述問題(1、2)解決
-    https://github.com/cubewise-code/bedrock/blob/v3-archive/Bedrock.Dim.Sub.Create.ByMDX.pro
+        https://github.com/cubewise-code/bedrock/blob/v3-archive/Bedrock.Dim.Sub.Create.ByMDX.pro
     
     
     2.不使用Bedrock者，請新增判斷式，並將MDX改寫如下
     
-    sMDXExpr = '{{[' | pDimension | '].MEMBERS.ITEM(0)},' | sMDXExpr | '}';
+        sMDXExpr = '{{[' | pDimension | '].MEMBERS.ITEM(0)},' | sMDXExpr | '}';
 
-    If( SubsetExists( pDimension, cTempSubset ) = 1 );
-          cTempSubset = cTempSubset | '.' | sRandomInt;
-    EndIf;
-    SubsetCreateByMDX( cTempSubset, sMDXExpr, pDimension ,1);
+        If( SubsetExists( pDimension, cTempSubset ) = 1 );
+              cTempSubset = cTempSubset | '.' | sRandomInt;
+        EndIf;
+        SubsetCreateByMDX( cTempSubset, sMDXExpr, pDimension ,1);
 
 
 
