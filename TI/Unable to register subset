@@ -25,7 +25,7 @@ Error Message:
         If( SubsetExists( pDimension, cTempSubset ) = 1 );
               cTempSubset = cTempSubset | '.' | sRandomInt;
         EndIf;
-        SubsetCreateByMDX( cTempSubset, sMDXExpr, pDimension ,1);
+        SubsetCreateByMDX( cTempSubset, sMDXExpr, pDimension);
 
 
 
