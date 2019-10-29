@@ -1,5 +1,5 @@
 聯集：
-{UNION(A,B}
+{UNION(A,B)}
 
 
 交集：
