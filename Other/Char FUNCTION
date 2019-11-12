@@ -1,0 +1,10 @@
+cProcessName = GetProcessName();
+cTimeStamp = TimSt( Now, '\Y\m\d\h\i\s' );
+sRandomInt = NumberToString( INT( RAND( ) * 10000 ));
+cDebugFile = GetProcessErrorFileDirectory | cProcessName | '.' | cTimeStamp | '.' | sRandomInt | 'Prolog.debug' ;
+
+
+nNumber=140;
+sString=Char(nNumber);
+
+AsciiOutPut(cDeBugFile,sString);
