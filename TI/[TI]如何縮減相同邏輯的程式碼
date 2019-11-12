@@ -1,4 +1,7 @@
-##########Prolog##########
+#=======================
+#Method1
+#=======================
+
 cProcessName = GetProcessName();
 cTimeStamp = TimSt( Now, '\Y\m\d\h\i\s' );
 sRandomInt = NumberToString( INT( RAND( ) * 1000 ));
@@ -17,3 +20,26 @@ While( Long( sLS ) > 0);
      sLS= Delet( sLS, 1, Scan('+', sLS ));
 
 End;
+
+
+
+#=======================
+#Method2
+#=======================
+
+sCube01 = 'Cube01';
+sCube02 = 'Cube02';
+sCube03 = 'Cube03';
+sCube04 = 'Cube04';
+sCube05 = 'Cube05';
+
+
+i= 1;
+While ( i <= 5 );
+    sIndex= NumberTostringEx( i, '00', '', '' )
+    sCube = Expand( '%sCube' | sIndex | '%' );
+    ExecuteProcess( 'Process', 'pCube', sCube );
+    i= i + 1;
+End;
+
+
