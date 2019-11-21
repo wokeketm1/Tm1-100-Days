@@ -1,3 +1,6 @@
+#====================
+#email use BLAT
+#====================
 1.下載BLAT
 https://www.blat.net/
 
@@ -12,3 +15,26 @@ Command = '"' |  [Blat folder path]  | '" '
               | '" -subject '     | '"' | [Subject] | '"' 
               | ' -attach '       | '"' | [Attach]  | '"'
               |  ' -html ';
+
+
+
+#====================
+#email use powershell
+#====================
+sFrom = '123456@Gmail......';
+sTo = '123456@Gmail......';
+sSubject = '123456';
+sBody = '123456';
+sSmtpServer = 'smtp server name';
+
+#sCmd
+sCmd = '"& {
+Send-MailMessage 
+-From ' | sFrom | ' 
+-To ' | sTo | ' 
+-Subject ' | '\"' | sSubject | '\"
+-Body ' | '\"' | sBody | '\"
+-SmtpServer ' | sSmtpServer | ' 
+}"';
+
+ExecuteCommand ( 'powershell.exe -command ' | sCmd, 1 );
