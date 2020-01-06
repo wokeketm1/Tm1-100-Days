@@ -9,4 +9,4 @@
 將TM1RPTROW隨意套一個Subset，重新建置Sheet將資料顯示出來，
 TM1RPTROW套回MDX後重新上傳即可。
 
-![text](https://raw.githubusercontent.com/howard40116/Rebellious-Tm1/master/ActiveFormChart.JPG)
+
