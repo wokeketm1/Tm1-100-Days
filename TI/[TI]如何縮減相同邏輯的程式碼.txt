@@ -23,23 +23,28 @@ End;
 
 
 
-#=======================
-#Method2
-#=======================
-
-sCube01 = 'Cube01';
-sCube02 = 'Cube02';
-sCube03 = 'Cube03';
-sCube04 = 'Cube04';
-sCube05 = 'Cube05';
-
+#=============================
+#Method2 (Element Validation)
+#=============================
+sDim01= '...';     sEl01=...;                                 
+sDim02= '...';     sEl02=...;                           
+sDim03= '...';     sEl03=...;                                              
 
 i= 1;
-While ( i <= 5 );
-    sIndex= NumberTostringEx( i, '00', '', '' )
-    sCube = Expand( '%sCube' | sIndex | '%' );
-    ExecuteProcess( 'Process', 'pCube', sCube );
+While ( i <= 3);
+
+    sIndex = NumberTostringEx( i, '00', '', '' );
+    sDim   = Expand( '%sDim' | sIndex | '%' );
+    sEl    = Expand( '%sEl'   | sIndex | '%' );
+
+	CellPutS( sEl ,...);
+	CellPutS( sEl ,...);
+
+	nValid=DimIx(sDim, sEl);
+	IF(nValid=0);
+		ItemSkip;
+	ENDIF;
+
     i= i + 1;
 End;
-
 
