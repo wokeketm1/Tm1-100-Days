@@ -26,7 +26,7 @@ Type=Websheet
 	Websheet	將物件定義為 Web 工作表。
 
 Workbook=Applications/Test
-	Cognos TM1 Web 工作表的路徑，切記要改為正斜線"/"
+	Cognos TM1 Web 工作表的路徑，切記要改為正斜線"/"，路徑請參考維度:}ApplicationEntries
 
 AdminHost=xxxx
 	Cognos TM1 Admin Server 的系統名稱
