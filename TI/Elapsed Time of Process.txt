@@ -3,6 +3,9 @@ nStartTime = NOW;
 
 nElapsedSeconds = ROUND ((NOW - nStartTime) / 0.000011574074074074);
 
+cDebugFile = GetProcessErrorFileDirectory | cProcess | '1.txt';
+ASCIIOutput( cDeBugFile, NumberToString(nElapsedSeconds));
+
 
 Author:qml
 https://www.tm1forum.com/viewtopic.php?t=5141
