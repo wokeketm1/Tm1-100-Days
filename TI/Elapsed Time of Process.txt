@@ -3,7 +3,7 @@ nStartTime = NOW;
 
 nElapsedSeconds = ROUND ((NOW - nStartTime) / 0.000011574074074074);
 
-cDebugFile = GetProcessErrorFileDirectory | cProcess | '1.txt';
+cDebugFile = GetProcessErrorFileDirectory | GetProcessName() | '1.txt';
 ASCIIOutput( cDeBugFile, NumberToString(nElapsedSeconds));
 
 
