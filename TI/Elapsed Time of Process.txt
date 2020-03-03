@@ -1,10 +1,14 @@
+#Start Flag
 nStartTime = NOW;
 
-
+#End Flag
 nElapsedSeconds = ROUND ((NOW - nStartTime) / 0.000011574074074074);
 
+#Output
 cDebugFile = GetProcessErrorFileDirectory | GetProcessName() | '1.txt';
 ASCIIOutput( cDeBugFile, NumberToString(nElapsedSeconds));
+
+
 
 
 Author:qml
