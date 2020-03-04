@@ -1,0 +1,25 @@
+Planning analytics後
+網路伺服器改採用Websphere Liberty Application Server
+也產生了很多奇奇怪怪的問題
+
+  1.所有的Websheet所占用的資源比以前大幅度上升(強迫換機?)
+  2.TM1Web網頁不知明原因沒有回應
+
+
+其中在Configuration中有個關鍵的設置要特別注意
+(本端配置>環境>IBM Cognos TM1服務>IBM Cognos TM1>Websphere Liberty Profile的記憶體上限(MB))
+
+  1.這個上限值如果您的機器記憶體<32GB，請設置<24576MB
+  2. <= PA 2.0.5 的版本, 請設置<=24576MB
+  3. >= PA 2.0.6 的版本, 請設置<=57344MB
+ 
+ 
+如果沒有按照上敘規範設定，您的可戶也許會三天兩頭跟您說TM1這個爛工具又掛掉了。
+
+
+
+
+
+
+
+
