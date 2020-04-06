@@ -1,0 +1,5 @@
+https://zh.wikipedia.org/wiki/ASCII
+
+Char(9)     ->Tab
+Char(10)    ->換行符號
+Char(39)    ->單引號
