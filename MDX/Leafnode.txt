@@ -1,0 +1,1 @@
+{TM1FILTERBYLEVEL({DESCENDANTS([   sDimension  ].[ sConsolidate ]) }, 0)}
