@@ -1,0 +1,17 @@
+ELISANC(dimension, element1, element2)
+element1是否為祖先
+
+ELISCOMP(dimension, element1, element2)
+element1是否為小孩
+
+ELISPAR(dimension, element1, element2)
+element1是否為父母
+
+ELLEV(dimension, element)
+element所在階層
+
+ELPAR(dimension, element, index)
+element的父母
+
+ELPARN(dimension, element)
+element的父母有幾個
