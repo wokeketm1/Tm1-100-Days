@@ -55,13 +55,14 @@ ExecuteProcess ( 'Bedrock.Cube.View.Create',
 
 
 ####ViewSubsetAssign####
-#cDimTarget='';
-#sMDX = '{TM1DRILLDOWNMEMBER( {[Product].[All Products]}, ALL, RECURSIVE )}';
+#sDim='';
+#sConsol='';
+#sMDX = '{TM1FILTERBYLEVEL( {TM1DRILLDOWNMEMBER( {['| sDim |'].['|sConsol|']}, ALL, RECURSIVE )}, 0)}';
 #
-#ExecuteProcess('Bedrock.Dim.Sub.Create.ByMDX','pDimension',cDimTarget,'pSubset',cSubset,'pMDXExpr',sMDX,'pConvertToStatic',1,
+#ExecuteProcess('Bedrock.Dim.Sub.Create.ByMDX','pDimension',sDim,'pSubset',cSubset,'pMDXExpr',sMDX,'pConvertToStatic',1,
 #               'pDebug',0);
 #
-#ViewSubsetAssign(cCubeTarget, cView, cDimTarget , cSubset);
+#ViewSubsetAssign(cCubeTarget, cView, sDim , cSubset);
 
 #ZeroOut Target View
 ViewZeroOut(cCubeTarget, cView);
@@ -100,13 +101,14 @@ ExecuteProcess ( 'Bedrock.Cube.View.Create', 'pCube' , cCubeSource, 'pView' , cV
                  'pDebug',0);
 
 ####ViewSubsetAssign####
-#cDimSource='';
-#sMDX = '{TM1DRILLDOWNMEMBER( {[Product].[All Products]}, ALL, RECURSIVE )}';
+#sDim='';
+#sConsol='';
+#sMDX = '{TM1FILTERBYLEVEL( {TM1DRILLDOWNMEMBER( {['| sDim |'].['|sConsol|']}, ALL, RECURSIVE )}, 0)}';
 #
-#ExecuteProcess('Bedrock.Dim.Sub.Create.ByMDX','pDimension',cDimSource,'pSubset',cSubset,'pMDXExpr',sMDX,'pConvertToStatic',1,
+#ExecuteProcess('Bedrock.Dim.Sub.Create.ByMDX','pDimension',sDim,'pSubset',cSubset,'pMDXExpr',sMDX,'pConvertToStatic',1,
 #      'pDebug',0);
 #
-#ViewSubsetAssign(cCubeSource, cView, cDimSource , cSubset);
+#ViewSubsetAssign(cCubeSource, cView, sDim , cSubset);
 
 #=========================================
 #Datasource
