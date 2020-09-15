@@ -1,3 +1,8 @@
+建議使用第二種陳述方式，因第一種有可能會抓到與Subset相同名的Element
 1.{[Dimension].[subset]}
-
 2.TM1SubsetToSet([Dimension], "subset")
+
+
+Hierarchy版本
+1.[Dimension].[Hierarchy].[subset]
+2.TM1SubsetToSet([Dimension].[Hierarchy], "Subset")
