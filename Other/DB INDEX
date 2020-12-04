@@ -1,7 +1,7 @@
 
 /*新增欄位
 ALTER TABLE [TABLE NAME]
-ADD [] varchar2(30);
+ADD [COL] varchar2(30);
 */
   
 /*增加INDEX
