@@ -1,0 +1,16 @@
+
+/*新增欄位
+ALTER TABLE [TABLE NAME]
+ADD [] varchar2(30);
+*/
+  
+/*增加INDEX
+CREATE INDEX [INDEX NAME]
+  ON [TABLE NAME] (COL1,COL2,COL3);                                     
+*/
+
+/* INDEX 搜尋
+SELECT *
+    FROM USER_INDEXES        
+*/
+
