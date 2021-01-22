@@ -20,6 +20,8 @@
   * 略過該筆資料，繼續向下一筆執行，慣用於Data tab。
   * 在Prolog使用會跳至Data tab。
   
+  * Sub Ti中請勿放在Prolog及Epilog，否則會程序失敗。
+  
 # ProcessBreak
 
   ```python
