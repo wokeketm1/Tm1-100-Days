@@ -2,11 +2,6 @@
 #Method1
 #=======================
 
-cProcessName = GetProcessName();
-cTimeStamp = TimSt( Now, '\Y\m\d\h\i\s' );
-sRandomInt = NumberToString( INT( RAND( ) * 1000 ));
-cDebugFile = GetProcessErrorFileDirectory | cProcessName | '.' | cTimeStamp | '.' | sRandomInt | 'Prolog.debug' ;
-
 sLS = 'howard+george+curry+Mary+';
 
 While( Long( sLS ) > 0);
