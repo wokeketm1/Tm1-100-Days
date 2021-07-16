@@ -1,0 +1,3 @@
+cCubeParameter='';
+sExportPath = CellGetS(cCubeParameter, 'Export Path', 'Text');
+sExportPath = sExportPath | If (SubSt(sExportPath, Long(sExportPath), 1) @<> '\', '\', '');
