@@ -1,6 +1,0 @@
-sElType = DType( sDim, V9 );
-If( sElType @<> 'S' );
-       CellPutN( Numbr( sValue), pCube, v1, v2, v3, v4, v5,v6,v7,v8,v9 );
-Else;
-        CellPutS( sValue, pCube, v1, v2, v3, v4, v5,v6,v7,v8,v9 );
-EndIf;

@@ -1,0 +1,7 @@
+IF( CellIsUpdateable( pCube,v1,v2,v3,v4,v5,v6,v7,v8,v9) > 0 );
+  IF( DType( sDim, V9 ) @= 'N' );
+    CellPutN( Numbr( sValue),pCube,v1,v2,v3,v4,v5,v6,v7,v8,v9);
+  ELSE;
+    CellPutS( sValue,pCube,v1,v2,v3,v4,v5,v6,v7,v8,v9);
+  ENDIF;
+ENDIF;
