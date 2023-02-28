@@ -1,0 +1,14 @@
+import requests
+from bs4 import BeautifulSoup
+
+# Send a GET request to the website
+url = 'https://www.kitco.com/'
+response = requests.get(url)
+
+# Use BeautifulSoup to parse the HTML content
+soup = BeautifulSoup(response.text, 'html.parser')
+
+# Find the tag that contains the gold price
+gold_price = soup.find(id="AU-bid").get_text()
+
+print (gold_price)
